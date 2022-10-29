@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/favIcon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Modern Color Picker</title>
+</head>
+
+<body>
+    <div class="container">
+        <section class="section">
+            <div class="section-header">
+                <h3 class="section-title">Display Color</h3>
+                <button class="section-header-action" id="random-color-btn">Random Color</button>
+
+
+            </div>
+            <div class="divider"></div>
+            <div class="color-display" id="display-color"></div>
+
+        </section>
+        <section class="section">
+            <section class="section-header">
+                <h3 class="section-title">Change & Copy Color</h3>
+                <button class="section-header-action" id="copy-to-clipboard">Copy to Clipboard</button>
+            </section>
+            <div class="divider"></div>
+            <div class="select-copy-mode">
+                <p class="lead">Select Copy Mode</p>
+                <div class="mode-radio-group">
+                    <div class="mode-input-group">
+                        <input type="radio" name="color-mode" value="hex" id="color-mode-hex " checked  />
+                        <label for="color-mode-hex">Hex</label>
+                    </div>
+                    <div class="mode-input-group">
+                        <input type="radio" name="color-mode" id="color-mode-rgb" value="rgb" />
+                        <label for="color-mode-rgb" value="rgb">RGB</label>
+                    </div>
+                </div>
+            </div>
+            <div class="select-color-code">
+                <div class="hex-input-group">
+                    <label for="hex-input" class="lead">Hex</label>
+                    <input type="text" id="color-hex" placeholder="DDDEEE" value="DDDEEE" class=" text-input hex-input">
+                    <div class="hex-icon">#</div>
+                </div>
+
+
+                <div class="rgb-input-group">
+                    <label for="rgb-input" class="lead">RGB</label>
+                    <input type="text" id="color-rgb" placeholder="rgb(221,222,238)" value="rgb(221,222,238)"
+                        class="text-input rgb-input" disabled>
+
+                </div>
+            </div>
+
+            <div class="color-sliders">
+                <p class="lead">Adjust RGB Colors</p>
+                <div class="color-sliders-group">
+                    <div>
+                        <div class="sliders-label-group">
+                            <p class="red">Red</p>
+                            <p class="red" id="slider-label-red">221</p>
+
+                        </div>
+                        <input type="range" min="0" max="255" value="221" id="color-slider-red"
+                            class="color-slider color-slider-red">
+                    </div>
+                    <div>
+                        <div class="sliders-label-group">
+                            <p class="green">Green</p>
+                            <p class="green" id="slider-label-green">222</p>
+
+                        </div>
+                        <input type="range" min="0" max="255" value="222" id="color-slider-green"
+                            class="color-slider color-slider-green">
+                    </div>
+                    <div>
+                        <div class="sliders-label-group">
+                            <p class="blue">Blue</p>
+                            <p class="blue" id="slider-label-blue">238</p>
+
+                        </div>
+                        <input type="range" min="0" max="255" value="238" id="color-slider-blue"
+                            class="color-slider color-slider-blue">
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+    </div>
+
+    <script src="./colorChange.js"></script>
+
+</body>
+
+</html>
